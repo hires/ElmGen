@@ -249,8 +249,8 @@ int main(int argc, char **argv) {
     printf("# clean target\n");
     printf("clean:\n");
     printf("\t@echo 'removing temporary files...'\n");
-    printf("\trm -f %s %s.bin %s.elf %s.hex $(OUT_DIR)/*.o\n", 
-        exec_name, exec_name, exec_name, exec_name);
+    printf("\trm -f %s %s.bin %s.elf %s.map %s.hex $(OUT_DIR)/*.o\n", 
+        exec_name, exec_name, exec_name, exec_name, exec_name);
     printf("\t@echo done.\n");
     printf("\n");
     fprintf(stderr, "done.\n");
