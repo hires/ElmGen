@@ -1,0 +1,50 @@
+0000		33330204	:rdax pot0, 0.8
+0001		0000020A	:mulx pot0
+0002		00000466	:wrax wetlvl, 0.0
+0003		10000224	:rdax pot1, 0.25
+0004		0000022A	:mulx pot1
+0005		40004CCD	:sof 1.0, 0.6
+0006		00000486	:wrax revtime, 0.0
+0007		4000000F	:or 0x400000
+0008		0000024A	:mulx pot2
+0009		00000306	:wrax addr_ptr, 0.0
+0010		40000284	:rdax adcl, 1.0
+0011		200004C5	:rdfx lptemp1, 0.5
+0012		400004C6	:wrax lptemp1, 1.0
+0013		40000426	:wrax dry, 1.0
+0014		00000002	:wra echo, 0.0
+0015		30000424	:rdax dry, 0.75
+0016		23287AA0	:rda api1#, kap
+0017		DCE83583	:wrap api1, -kap
+0018		2328EE00	:rda api2#, kap
+0019		DCE87AC3	:wrap api2, -kap
+0020		23280F60	:rda api3#, kap
+0021		DCE80023	:wrap api3, -kap
+0022		23283560	:rda api4#, kap
+0023		DCE80F83	:wrap api4, -kap
+0024		400DE7E0	:rda del2#, 1.0
+0025		0000048A	:mulx revtime
+0026		000004A6	:wrax temp, 0.0
+0027		40000406	:wrax apout, 1
+0028		400004A4	:rdax temp, 1.0
+0029		DCE9EFE0	:rda ap1#, -kap
+0030		2328EE23	:wrap ap1,kap
+0031		4009F002	:wra del1, 1.0
+0032		0000046A	:mulx wetlvl
+0033		00000446	:wrax wet, 0.0
+0034		40000424	:rdax dry, 1.0
+0035		40000444	:rdax wet, 1.0
+0036		000002C6	:wrax dacl, 0.0
+0037		400B95E0	:rda del1#, 1.0
+0038		0000048A	:mulx revtime
+0039		000004A6	:wrax temp, 0.0
+0040		40000404	:rdax apout, 1
+0041		400004A4	:rdax temp, 1.0
+0042		232CCE80	:rda ap2#, kap
+0043		DCEB9603	:wrap ap2, -kap
+0044		400CCEA2	:wra del2, 1.0
+0045		0000046A	:mulx wetlvl
+0046		00000446	:wrax wet, 0.0
+0047		40000424	:rdax dry, 1.0
+0048		40000444	:rdax wet, 1.0
+0049		000002E6	:wrax dacr, 0.0

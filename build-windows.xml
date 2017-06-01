@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="elmGen" default="jar">
+	
+	<!-- this sets the bmix.version property -->
+	<property file="src/com/kilpatrickaudio/elmGen/version.properties"/>
+	
+<!--	<taskdef name="jarbundler" 
+		classpath="lib_build_osx/jarbundler.jar:lib_build_osx/xercesImpl.jar:lib_build_osx/xml-apis.jar"
+		classname="net.sourceforge.jarbundler.JarBundler"/>
+		-->
+	
+    <target name="compile" description="Compiles the source code to the build directory">
+        <mkdir dir="build"/>
+    	<javac srcdir="src"
+             destdir="build"
+             debug="on">
+    		<classpath>
+    		      <pathelement path="${classpath}"/>
+    		      <fileset dir="lib">
+    		        <include name="**/*.jar"/>
+    		      </fileset>
+      		      <fileset dir="C://Program Files//eclipse//plugins//">
+  	     	        <include name="**/*.jar"/>
+  		          </fileset>
+    			</classpath>
+    		</javac>
+    	<copy file="src/com/kilpatrickaudio/elmGen/version.properties" todir="build/com/kilpatrickaudio/elmGen"/>
+    </target>
+	
+	<target name="jar" depends="clean,compile" description="Creates an executable JAR of the application">
+		<mkdir dir="dist"/>
+		<mkdir dir="dist/elmGen-${elmGen.version}"/>
+		<jar destfile="dist/elmGen-${elmGen.version}/elmGen.jar"
+			 basedir="build" />
+	</target>
+	
+	<target name="clean">
+		<delete dir="." includes="dist/**" includeemptydirs="true"/>
+		<delete dir="." includes="build/**" includeemptydirs="true"/>
+	</target>
+	 
+</project>
