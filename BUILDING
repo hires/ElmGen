@@ -1,0 +1,52 @@
+makegen Version Notes
+
+Written by: Andrew Kilpatrick
+Copyright 2016: Kilpatrick Audio
+
+makegen is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+makegen is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with makegen.  If not, see <http://www.gnu.org/licenses/>.
+
+Introduction:
+
+makegen is a program for automatically generating Makefiles from a source
+tree. It uses gcc to figure out depedencies and produces a proper Makefile
+that can contain any number of nested subdirectories. It is inspired by a
+shell script that was found online, except it only handled source files in
+the current directory. Normally this program is run by a shell script in
+the source tree that contains all the required parameters. As files are
+added to the project, simply run the shell script again and a new Makefile
+will be generated. For an example of how to use it, see the GitHub repository
+for CARBON:
+
+https://github.com/kilpatrickaudio/CARBON
+
+Support for sources:
+
+Andrew Kilpatrick and Kilpatrick Audio provides NO SUPPORT for the code and
+scripts provided here. If you can't figure it out or get it to work for you,
+sorry about that. We make our living by selling hardware, which we support
+very well. We believe in open source and want to contribute what we can, but
+simply do not have the resouces to answer emails related to this code. All
+feature and bug requests, or suggestions should be performed through the
+online GitHub source repository. Emails received directly by Kilpatrick Audio 
+or Andrew Kilpatrick will unfortunately go unanswered.
+
+GihHub repository:
+
+https://github.com/kilpatrickaudio/makegen
+
+Compiling:
+- simply compile this program manually by issuing a command such as:
+  cc -o makegen makegen.c
+
+
